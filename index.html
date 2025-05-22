@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Skianlyze</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,700;1,700&display=swap" rel="stylesheet" />
+
+    <!-- Feather Icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <!-- My Style -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Javascript -->
+     <script src="contact.js"></script>
+</head>
+
+<body>
+    <!-- Navbar start -->
+    <nav class="navbar">
+        <a href="/" class="navbar-logo">Skinalyze</a>
+
+        <div class="navbar-nav">
+            <a href="#">Home</a>
+            <a href="#about">About</a>
+            <a href="http://localhost:8502/">Analyze Your Skin</a>
+            <a href="#types">Types of Skin Problems</a>
+            <a href="#contact">Contact Us</a>
+        </div>
+
+        <div class="navbar-extra">
+            <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
+        </div>
+    </nav>
+    <!-- Navbar end -->
+  
+    <!-- Hero Section start -->
+    <section class="hero" id="Home">
+        <main class="content">
+            <h1>SKIN<span>ALYZE</span></h1>
+            <p>Your One Stop Facial Skin Analyzer</p>
+                <a href='http://127.0.0.1:5500/index.html#'>
+                    <button>Start Analyze 🡢</button>
+                </a>
+        </main>
+    </section>
+    <!-- Hero Section end -->
+
+    <!-- About Section start -->
+    <section id="about" class="about">
+        <h2>About Us</h2>
+        <div class="row">
+            <div class="content">
+                <p>
+                    Skinalyze adalah platform cerdas yang dirancang untuk membantu pengguna memahami kondisi kulit wajah mereka secara akurat dan cepat. Menggunakan teknologi berbasis Convolutional Neural Network (CNN), Skinalyze mampu mendeteksi berbagai masalah kulit seperti jerawat, kulit berminyak, kering melalui analisis gambar wajah. Kami percaya bahwa perawatan kulit yang tepat dimulai dari pemahaman yang akurat, dan dengan Skinalyze, kami menghadirkan solusi digital yang mudah diakses, informatif, dan berbasis teknologi terkini untuk mendukung perawatan kulit harian Anda.
+                </p>
+            </div>
+        </div>
+    </section>
+    <!-- About Section end -->
+
+    <!-- Steps Section Start -->
+    <section id="steps" class="steps">
+        <div class="container">
+            <h2>How To Use</h2>
+            
+            <div class="step">
+                <div class="circle">1</div>
+                <p>Akses halaman "<a href="http://localhost:8502/">Analyze Your Skin</a>"" atau tekan tombol "Start Analyze" di perangkat anda</p>
+            </div>
+
+            <div class="step">
+                <div class="circle">2</div>
+                <p>Ambil gambar wajah anda menggunakan kamera perangkat dan upload fotonya kedalam pada bagian  Take a picture of your face using camera or upload your face picture from the gallery (the picture must contain only 1 face).</p>
+            </div>
+
+            <div class="step">
+                <div class="circle">3</div>
+                <p>Click the “Analyze” button to began skin identification</p>
+            </div>
+
+            <div class="step">
+                <div class="circle">4</div>
+                <p>After the identification is finished, the results will appear alongside your skin explanation and the recommended treatment</p>
+            </div>
+        </div>
+    </section>
+    <!-- Steps section End -->
+
+    <!-- Skin Types Section Start -->
+    <section id="types" class="types">
+        <div class="container">
+            <h2>Types of Skin Problems</h2>
+
+            <div class="row">
+                <h4>1. Acne</h4>
+                <div class="types-img">
+                    <img src="/img/acne.jpg" alt="acne" srcset="">
+                </div>
+                
+                <div class="content">
+                    <p>Jerawat (acne) adalah kondisi saat pori-pori kulit tersumbat oleh minyak berlebih, sel kulit mati, dan bakteri, sehingga memicu peradangan. Jerawat dapat muncul dalam bentuk komedo, benjolan merah, atau bahkan kista, dan biasanya dipicu oleh faktor hormonal, stres, serta pola hidup yang kurang sehat.</p>
+                </div>
+            </div>
+
+            <div class="row">
+                <h4>2. Berminyak</h4>
+                <div class="types-img">
+                    <img src="/img/oily.jpg" alt="acne" srcset="">
+                </div>
+                
+                <div class="content">
+                    <p>Kulit berminyak terjadi ketika kelenjar minyak (sebaceous glands) memproduksi sebum secara berlebihan. Ciri-ciri kulit berminyak antara lain permukaan kulit yang mengilap, terutama di area T-zone (dahi, hidung, dan dagu), serta pori-pori yang tampak besar. Kondisi ini sering kali membuat kulit rentan berjerawat</p>
+                </div>
+            </div>
+
+            <div class="row">
+                <h4>3. Kulit Kering</h4>
+                <div class="types-img">
+                    <img src="/img/dry.jpg" alt="acne" srcset="">
+                </div>
+                
+                <div class="content">
+                    <p>Kulit kering adalah kondisi saat kulit kekurangan kelembapan alami, sehingga terasa kencang, kasar, bahkan bisa mengelupas. Kulit kering umumnya disebabkan oleh faktor lingkungan seperti cuaca dingin, penggunaan produk perawatan yang terlalu keras, atau penuaan.</p>
+                </div>
+            </div>
+        </div>
+    </section> 
+    <!-- Skin Types Section End -->
+
+    <!-- Contact Section start -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <div class="row">
+            <form onsubmit="sendToWhatsApp(event)">
+                <div class="input-group">
+                    <i data-feather="user"></i>
+                    <input type="text" name="name" id="contactName" placeholder="Nama Anda" required>
+                </div>
+                <div class="input-group">
+                    <i data-feather="mail"></i>
+                    <input type="email" name="email" id="contactEmail" placeholder="Email Anda" required>
+                </div>
+                <div class="input-group">
+                    <i data-feather="phone"></i>
+                    <input type="text" name="phone" id="contactPhone" placeholder="Nomor HP" required>
+                </div>
+                <div class="input-group">
+                    <i data-feather="message-circle"></i>
+                    <textarea name="message" id="pesan" cols="100%" rows="5" placeholder="Pesan Anda" required></textarea>
+                </div>
+                <button type="submit" class="btn">Kirim Pesan</button>
+            </form>
+            </div>
+        </div>
+    </section>
+    <!-- Contact Section end -->
+    
+      <!-- Footer start -->
+      <footer>
+        <div class="socials">
+            <a href="https://www.instagram.com/samuel_hamdani/"><i data-feather="instagram"></i></a>
+            <a href="https://www.linkedin.com/in/samuel-christian-hamdani"><i data-feather="linkedin"></i></a>
+            <a href="https://www.facebook.com/samuel.hamdani.5/"><i data-feather="facebook"></i></a>
+        </div>
+
+        <div class="links">
+            <a href="#">Home</a>
+            <a href="#about">About</a>
+            <a href="analyze.html">Analyze Your Skin</a>
+            <a href="#types">Types of Skin Problems</a>
+            <a href="#contact">Contact Us</a>
+        </div>
+
+        <div class="credit">
+              <p>Created by <a href="https://github.com/SamuelHamdani">Samuel Hamdani</a>. &copy;2025.</p>
+        </div>
+      </footer>
+      <!-- Footer end -->
+  
+      <!-- Feather Icons -->
+      <script>
+          feather.replace();
+      </script>
+  
+      <!-- My Javascript -->
+       <script src="script.js"></script>
+</body>
+</html>
