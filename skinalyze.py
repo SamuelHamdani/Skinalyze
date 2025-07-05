@@ -12,12 +12,12 @@ def load_model():
 model = load_model()
 
 # Label sesuai urutan kelas pada model kamu
-labels = ['acne', 'dry', 'normal', 'oily']
+labels = ['acne', 'blackhead', 'normal', 'oily']
 
 # Mapping label ke bahasa Indonesia
 label_mapping = {
     'acne': 'Berjerawat',
-    'dry': 'Kering',
+    'blackhead': 'Komedo Hitam',
     'normal': 'Normal',
     'oily': 'Berminyak'
 }
@@ -31,12 +31,12 @@ treatment_advice = {
         "Gunakan pelembap non-komedogenik.",
         "Selalu gunakan sunscreen di pagi hari."
     ],
-    'dry': [
-        "Gunakan pembersih wajah tanpa sabun dan bebas alkohol.",
-        "Gunakan pelembap dengan hyaluronic acid atau ceramide.",
-        "Hindari mencuci wajah dengan air panas.",
-        "Gunakan humidifier jika berada di ruangan ber-AC.",
-        "Minum air putih yang cukup setiap hari."
+    'blackhead': [
+        "Cuci wajah secara rutin dua kali sehari menggunakan sabun pembersih wajah yang mengandung salicylic acid.",
+        "Lakukan eksfoliasi ringan 1 - 2 kali seminggu dengan scrub atau produk eksfoliasi kimia.",
+        "Gunakan produk non-komedogenik, baik untuk skincare maupun kosmetik.",
+        "Hindari memencet komedo secara langsung, karena dapat menyebabkan iritasi, luka, atau infeksi.",
+        "Konsultasikan ke dokter kulit jika komedo membandel, untuk mendapatkan perawatan secara profesional."
     ],
     'oily': [
         "Gunakan pembersih wajah khusus kulit berminyak dua kali sehari.",
@@ -55,7 +55,7 @@ st.markdown(
     "<h1 style='text-align: center;margin-bottom: 2rem; border-bottom: 2px solid #222; padding-bottom: 10px;'>Analisa Kulitmu</h1>",
     unsafe_allow_html=True
 )
-st.write("Unggah gambar wajah Anda untuk mendeteksi jenis masalah yang dialami (acne, kering, berminyak)")
+st.write("Unggah gambar bagian wajah anda seperti dahi, pipi, atau hidung untuk mendeteksi jenis masalah yang dialami (acne, komedo hitam, berminyak).")
 
 # Upload file gambar
 uploaded_file = st.file_uploader("Pilih gambar (.jpg, .jpeg, .png)", type=["jpg", "jpeg", "png"])
